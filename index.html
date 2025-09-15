@@ -10,7 +10,7 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="logo/sp_logo.jpg" alt="Logo">
+      <img src="images/logo/sp_logo.jpg" alt="Logo">
       <span>Solidariti Pendidikan</span>
     </div>
 
@@ -30,13 +30,26 @@
   </header>
 
 
-  <!-- Hero Section -->
+    <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <h2>Solidariti Pendidikan</h2>
-        <p>Education for All, Together We Rise</p>
-      </div>
+    <div class="slideshow-container" id="slideshow">
+
+    <div class="slide active">
+      <img src="images/graphics/banner5.png" alt="Banner">
+    </div>
+
+    <div class="slide">
+      <img src="images/graphics/banner2.png" alt="Banner">
+    </div>
+
+    <div class="slide">
+      <img src="images/graphics/banner3.png" alt="Banner">
+    </div>
+
+    <!-- Arrows -->
+    <a class="prev" id="prev">&#10094;</a>
+    <a class="next" id="next">&#10095;</a>
+
     </div>
   </section>
 
@@ -74,14 +87,60 @@
     <p>© 2025 Solidariti Pendidikan. All rights reserved.</p>
   </footer>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+    let slideInterval = setInterval(nextSlide, 5000); // auto change every 5s
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active", "prev");
+        if (i === index) {
+          slide.classList.add("active");
+        } else if (i === (index - 1 + slides.length) % slides.length) {
+          slide.classList.add("prev");
+        }
+      });
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      let nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+      let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+    }
+
+    document.getElementById("next").addEventListener("click", () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      prevSlide();
+      resetInterval();
+    });
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // init
+    showSlide(currentIndex);
+  </script>
 
 </body>
 </html>
