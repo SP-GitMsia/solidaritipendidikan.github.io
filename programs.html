@@ -8,18 +8,25 @@
 </head>
 <body>
   <header class="navbar">
-  <div class="logo">
-    <img src="logo/sp_logo.jpg" alt="Logo"> <!-- replace with real logo -->
-    <span>Solidariti Pendidikan</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="programs.html">Programs</a></li>
-    <li><a href="involved.html">Get Involved</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</header>
+    <div class="logo">
+      <img src="logo/sp_logo.jpg" alt="Logo">
+      <span>Solidariti Pendidikan</span>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- Unicode hamburger (☰) -->
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
 
 
   <main>
@@ -50,5 +57,15 @@
   <footer>
     <p>© 2025 Solidariti Pendidikan. All rights reserved.</p>
   </footer>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
