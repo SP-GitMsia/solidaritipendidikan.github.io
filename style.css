@@ -348,3 +348,15 @@ footer {
   }
 }
 
+/* Responsive logo text */
+@media (max-width: 768px) {
+  .logo span {
+    font-size: 1.2rem; /* smaller on tablets/medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 1rem;   /* even smaller on very small phones */
+  }
+}
