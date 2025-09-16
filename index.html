@@ -16,7 +16,7 @@
 
     <!-- Hamburger Button -->
     <div class="hamburger" id="hamburger">
-      &#9776; <!-- Unicode hamburger (☰) -->
+      &#9776;
     </div>
 
     <!-- Nav Links -->
@@ -29,56 +29,95 @@
     </ul>
   </header>
 
-
-    <!-- Hero Section -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="slideshow-container" id="slideshow">
 
-    <div class="slide active">
-      <img src="images/graphics/banner1.png" alt="Banner">
-    </div>
+      <div class="slide active">
+        <img src="images/graphics/banner1.png" alt="Banner">
+      </div>
 
-    <div class="slide">
-      <img src="images/graphics/banner2.png" alt="Banner">
-    </div>
+      <div class="slide">
+        <img src="images/graphics/banner2.png" alt="Banner">
+      </div>
 
-    <div class="slide">
-      <img src="images/graphics/banner3.png" alt="Banner">
-    </div>
+      <div class="slide">
+        <img src="images/graphics/banner3.png" alt="Banner">
+      </div>
 
-    <!-- Arrows -->
-    <a class="prev" id="prev">&#10094;</a>
-    <a class="next" id="next">&#10095;</a>
+      <!-- Arrows -->
+      <a class="prev" id="prev">&#10094;</a>
+      <a class="next" id="next">&#10095;</a>
 
     </div>
   </section>
 
-  <!-- Impact Section -->
-  <section class="impact">
+  <!-- Welcome Section -->
+  <section class="welcome">
     <div class="container">
-      <h2>Our Impact</h2>
-      <div class="impact-grid">
-        <div class="impact-card">
-          <h3>500+</h3>
-          <p>Students Reached</p>
+      <h2>Welcome to Solidariti Pendidikan</h2>
+      <p class="tagline">
+        Pemuda Harapan Negara, Pendidik Tiang Negara, Kami Berhak Berusaha
+      </p>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="who-we-are">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>
+        Solidariti Pendidikan is a student-led initiative advocating for a better education 
+        system for all by bringing facts and stories to the forefront. We aim to foster a 
+        generation of Malaysian students who are aware of their rights to education and can 
+        uplift their communities as change-makers.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="what-we-do">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="what-grid">
+        <div class="what-card">
+          <h3>Access to Education</h3>
+          <p>We advocate for equal opportunities for all students, regardless of socio-economic background.</p>
         </div>
-        <div class="impact-card">
-          <h3>200+</h3>
-          <p>Volunteers Engaged</p>
+        <div class="what-card">
+          <h3>Quality of Education</h3>
+          <p>We collaborate with stakeholders to improve teaching and learning standards nationwide.</p>
         </div>
-        <div class="impact-card">
-          <h3>50+</h3>
-          <p>Schools Supported</p>
+        <div class="what-card">
+          <h3>Mental Health & Well-Being</h3>
+          <p>We promote supportive policies and resources that safeguard student well-being.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Intro Section -->
-  <section class="intro">
+  <!-- Vision & Mission -->
+  <section class="vision-mission">
     <div class="container">
-      <h2>Welcome</h2>
-      <p>Solidariti Pendidikan is a non-profit dedicated to ensuring equal access to quality education. We empower students, support educators, and build strong communities through our initiatives.</p>
+      <h2>Our Vision & Mission</h2>
+      <p>
+        Our vision is to ensure all students in Malaysia have access to inclusive and equitable 
+        quality education. Our mission is to advocate for systemic reforms and empower students 
+        to become agents of change.
+      </p>
+    </div>
+  </section>
+
+  <!-- Objectives -->
+  <section class="objectives">
+    <div class="container">
+      <h2>Our Objectives</h2>
+      <ul>
+        <li>Address educational disparities across communities.</li>
+        <li>Enhance teaching and learning quality through policy reforms.</li>
+        <li>Promote mental health support and awareness among students.</li>
+        <li>Empower young people to be change-makers in education.</li>
+      </ul>
     </div>
   </section>
 
@@ -87,6 +126,7 @@
     <p>© 2025 Solidariti Pendidikan. All rights reserved.</p>
   </footer>
 
+  <!-- Mobile Menu Script -->
   <script>
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
@@ -96,10 +136,11 @@
     });
   </script>
 
+  <!-- Slideshow Script -->
   <script>
     let slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
-    let slideInterval = setInterval(nextSlide, 5000); // auto change every 5s
+    let slideInterval = setInterval(nextSlide, 5000);
 
     function showSlide(index) {
       slides.forEach((slide, i) => {
@@ -138,7 +179,6 @@
       slideInterval = setInterval(nextSlide, 5000);
     }
 
-    // init
     showSlide(currentIndex);
   </script>
 
