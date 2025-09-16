@@ -320,5 +320,31 @@ footer {
 .prev { left: 20px; }
 .next { right: 20px; }
 
+/* Responsive Slideshow */
+@media (max-width: 768px) {
+  .slideshow-container {
+    height: 60vh; /* reduce height on small screens */
+    margin-top: 60px; /* slightly less margin under navbar */
+  }
 
+  .slide img {
+    object-fit: cover; /* keep image filling screen */
+  }
+
+  .prev, .next {
+    font-size: 1.5rem;   /* smaller arrows */
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 50vh; /* even smaller for very small phones */
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
 
