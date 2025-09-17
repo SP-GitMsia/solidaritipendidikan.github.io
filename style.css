@@ -683,12 +683,10 @@ footer {
 
 @media (max-width: 480px) {
   .slideshow-container {
-    height: 32vh; /* much shorter for small phones */
+    height: 22vh;        /* smaller banner height */
+    margin-top: 48px;    /* less space below navbar */
   }
-  .slide img {
-    height: auto;
-    max-height: 32vh;
-    width: 100%;
-    object-fit: contain; /* show full image, less cropping */
+  .welcome {
+    padding: 2rem 1rem;  /* less padding for welcome section */
   }
 }
