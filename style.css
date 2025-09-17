@@ -683,7 +683,7 @@ footer {
 
 @media (max-width: 480px) {
   .slideshow-container {
-    height: 22vh;        /* smaller banner height */
+    height: 15vh;        /* smaller banner height */
     margin-top: 48px;    /* less space below navbar */
   }
   .welcome {
