@@ -321,49 +321,54 @@ footer {
 .next { right: 20px; }
 
 
+/* ...existing code... */
+
 /* Responsive Slideshow */
 @media (max-width: 1024px) {
   .slideshow-container {
-    height: 70vh; /* medium tablets/laptops */
+    height: 70vh;
     margin-top: 65px;
+  }
+  .container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .slideshow-container {
-    height: 55vh; /* smaller tablets */
+    height: 55vh;
     margin-top: 60px;
   }
-  .slide img {
-    object-fit: cover;
-  }
-  .prev, .next {
-    font-size: 1.3rem;
-    padding: 0.5rem;
+  .container {
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
 }
 
 @media (max-width: 600px) {
   .slideshow-container {
-    height: 40vh; /* large phones/small tablets */
+    height: 40vh;
     margin-top: 55px;
   }
-  .prev, .next {
-    font-size: 1.1rem;
-    padding: 0.4rem;
+  .container {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
   }
 }
 
 @media (max-width: 400px) {
   .slideshow-container {
-    height: 30vh; /* very small phones */
+    height: 30vh;
     margin-top: 50px;
   }
-  .prev, .next {
-    font-size: 1rem;
-    padding: 0.3rem;
+  .container {
+    margin-top: 0.2rem;
+    padding-top: 0.2rem;
   }
 }
+
+
 
 
 /* Responsive logo text */
