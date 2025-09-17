@@ -487,3 +487,147 @@ footer {
 }
 
 
+/* About Page Sections */
+.about-section {
+  padding: 60px 20px;
+}
+
+.about-section h2, .team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0044aa;
+}
+
+.about-section h3 {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  color: #0077ff;
+}
+
+.about-section p, .about-section ul {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* Our Team */
+.team-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+
+.story {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.story h3 {
+  color: #0044aa;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.milestone {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #0044aa;
+}
+
+.milestone h4 {
+  color: #0077ff;
+  margin-bottom: 0.5rem;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+
+.about .container p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+
+@keyframes blue-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.team-member {
+  position: relative;
+  overflow: hidden;
+  background: #0044aa; /* fallback solid blue */
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.team-member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: blue-sweep 2s infinite;
+}
+
+.team-member:hover::before {
+  animation-play-state: paused; /* stop animation on hover */
+}
+
+.team-member:hover {
+  transform: scale(1.03);
+}
