@@ -140,7 +140,7 @@
   <script>
     let slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
-    let slideInterval = setInterval(nextSlide, 5000);
+    let slideInterval = setInterval(nextSlide, 3000); //The 3000 means 3 seconds between each automatic slide change.
 
     function showSlide(index) {
       slides.forEach((slide, i) => {
