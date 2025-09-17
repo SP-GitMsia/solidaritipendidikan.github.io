@@ -679,15 +679,3 @@ footer {
     opacity: 0.7;
   }
 }
-
-.moving-light {
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  border-radius: 18px;
-  box-shadow: 0 0 60px 30px rgba(255, 230, 80, 0.45);
-  opacity: 0.8;
-  transition: all 0.7s cubic-bezier(.4,2,.6,1);
-  width: 0;
-  height: 0;
-}
