@@ -90,7 +90,7 @@ h2 {
 
 /* Cards */
 .team-grid,
-.program-grid,
+.project-grid,
 .involved-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -99,7 +99,7 @@ h2 {
 }
 
 .team-member,
-.program-card,
+.project-card,
 .involved-card {
   background: #fff;
   padding: 2rem;
@@ -111,14 +111,14 @@ h2 {
 }
 
 .team-member:hover,
-.program-card:hover,
+.project-card:hover,
 .involved-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .team-member img,
-.program-card img,
+.project-card img,
 .involved-card img {
   border-radius: 12px;
   margin-bottom: 1rem;
@@ -630,4 +630,64 @@ footer {
 
 .team-member:hover {
   transform: scale(1.03);
+}
+
+.project-card img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  height: 280px;      /* Set a fixed taller height */
+  max-height: none;   /* Remove max-height limit */
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
+
+
+/* Project Card Light Animation */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0) 60%);
+  z-index: 0;
+  pointer-events: none;
+  animation: lightSweep 5s linear infinite;
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(40%, 40%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(80%, 80%) scale(1);
+    opacity: 0.7;
+  }
+}
+
+.moving-light {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 18px;
+  box-shadow: 0 0 60px 30px rgba(255, 230, 80, 0.45);
+  opacity: 0.8;
+  transition: all 0.7s cubic-bezier(.4,2,.6,1);
+  width: 0;
+  height: 0;
 }

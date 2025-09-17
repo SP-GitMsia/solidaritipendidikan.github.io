@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - Solidariti Pendidikan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo/sp_logo.jpg" alt="Logo">
+      <span>Solidariti Pendidikan</span>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- Unicode hamburger (☰) -->
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+
+  <main>
+  <section class="Our Projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="project-grid">
+        <!-- Top Row -->
+        <div class="project-card">
+          <img src="images/projects/socmed.png" alt="Social Media Campaigns">
+          <h3>Social Media Campaigns</h3>
+          <p>Utilizing social media platforms to raise awareness about educational issues and promote our initiatives</p>
+        </div>
+        <div class="project-card">
+          <img src="images/projects/banjir.png" alt="Darurat Banjir">
+          <h3>Darurat Banjir</h3>
+          <p>Engaging volunteers to support flood relief efforts and assist affected schools communities</p>
+        </div>
+        <div class="project-card">
+          <img src="images/projects/stuco.png" alt="StuCo">
+          <h3>StuCo</h3>
+          <p>Student Council (StuCo) initiatives aimed at fostering leadership and collaboration among students</p>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="project-card">
+          <img src="images/projects/sek.jpg" alt="Sekolah Kenegaraan">
+          <h3>Sekolah Kenegaraan</h3>
+          <p>Providing civic education and promoting national identity among students</p>
+        </div>
+        <div class="project-card">
+          <img src="images/projects/vid_se.png" alt="Video Series">
+          <h3>Video Series</h3>
+          <p>Creating engaging video content to highlight educational issues and promote our initiatives</p>
+        </div>
+        <div class="project-card">
+          <img src="images/projects/dir_pen.jpg" alt="Direktori Pendidikan">
+          <h3>Direktori Pendidikan</h3>
+          <p>Creating a comprehensive directory of educational resources and support services for students</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer>
+    <p>© 2025 Solidariti Pendidikan. All rights reserved.</p>
+  </footer>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
