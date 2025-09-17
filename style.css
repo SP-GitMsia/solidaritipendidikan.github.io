@@ -679,3 +679,16 @@ footer {
     opacity: 0.7;
   }
 }
+
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 32vh; /* much shorter for small phones */
+  }
+  .slide img {
+    height: auto;
+    max-height: 32vh;
+    width: 100%;
+    object-fit: contain; /* show full image, less cropping */
+  }
+}
